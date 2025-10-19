@@ -1,4 +1,4 @@
-# Challenge 03 - Templo Mayor
+# Challenge 05 - Let's go ahead and jump!
 
 ## Integrantes del equipo
 - Debbimar Díaz Santiago
