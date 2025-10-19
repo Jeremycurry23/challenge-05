@@ -5,7 +5,9 @@ Challenge 05 - lets go ahead and jump!
 Integrantes del equipo
 
 Debbimar Díaz Santiago
+
 Jonlier Díaz Rivera
+
 Jeremy Curry Romero
 
 Reglas del reto
