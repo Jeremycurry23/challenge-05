@@ -11,7 +11,7 @@ Este reto esta basado en hacer un script de c# el cual permita que el robot pued
 ## Proceso de WASD
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/dc49dfee-2424-456a-b5cf-2864487b35c2" <img width="500" height/>
+  <img src="https://github.com/user-attachments/assets/dc49dfee-2424-456a-b5cf-2864487b35c2" width="50%" />
   <p><i>Paso 1: Scripts.</i></p>
 </div>
 
@@ -19,7 +19,7 @@ El movimiento del jugador con WASD se realizo en clase al igual que la accion de
 
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/3092d419-8a97-4dcf-929a-04197ce7f2e2" <img width="592" height="187" />
+  <img src="https://github.com/user-attachments/assets/3092d419-8a97-4dcf-929a-04197ce7f2e2" width="50%" />
   <p><i>Paso 2: Player movement update.</i></p>
 </div>
 
@@ -27,35 +27,35 @@ Al inicio de clase se habia hecho el movimiento WASD del jugar junto con las fle
 
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/28035dd1-9873-4ed3-b582-8e0e897acfcf" <img width="592" height="187" />
+  <img src="https://github.com/user-attachments/assets/28035dd1-9873-4ed3-b582-8e0e897acfcf" width="50%" />
   <p><i>Paso 2: (Old input)</i></p>
 </div>
 
 Este es el VisualScripting para el input viejo de movimiento de jugador con WASD. Este se logro yendo a "add component"  despues a VisualScripting y graph. Una vez dentro era cuestion de darle a new node y se agregaba la funcion que se necesitaba para lograr la accion deseada.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f73e3708-c5b7-4336-8e64-adf78a310d1d" <img width="592" height="187" />
+  <img src="https://github.com/user-attachments/assets/f73e3708-c5b7-4336-8e64-adf78a310d1d" width="50%" />
   <p><i>Paso 3: Input</i></p>
 </div>
 
 Volviendo al movimiento de jugador, se deshabilito el inout viejo en los settings y se coloco el nuevo y el codigo se reemplazo. Pero para lograr esto habia que bajar en package manager en unity el Input System manager. Una vez se instalo pues se iba a "add component" y se le daba a action.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/2012515b-da59-48a1-acb7-6181ed0cecbf"  <img width="592" height="187" />
+  <img src="https://github.com/user-attachments/assets/2012515b-da59-48a1-acb7-6181ed0cecbf"  width="50%" />
   <p><i>Paso 3: (Input SysMap)</i></p>
 </div>
 
 Una vez ahi, se le coloco de nombre InputSysMap01 y es una herramienta que sirve para facilitar ese link de la accion que quiere realizar el jugador en el juego.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/5fb95c10-da71-4e86-9d2b-8f5379aa297c" <img width="592" height="187" />
+  <img src="https://github.com/user-attachments/assets/5fb95c10-da71-4e86-9d2b-8f5379aa297c" width="50%" />
   <p><i>Paso 4: Look player movement</i></p>
 </div>
 
 Al finalizar el movimiento WASD pues nos movemos a el movimiento de la pantalla o camara. Al inicio en la clase tambien se habia realizado el mismo con el input viejo y se habia hecho un visual scripting tambien. Pero aqui en la imagen podemos ver el codigo para el input nuevo y tambien una funcion awake que sirve para que el mouse desaparezca dentro del recuadro de imagen mientras se este moviendo la camara. Algo que hay que agregar es que con el input nuevo, el cambio mas grande que hubo en el codigo es el tener que agregar una variable Vector 2 que este tiene los ejes de X y Y entonces el lookValue es de tipo float porque asi el sistema reconoce el movimiento con el valor positivo a un lado y con el negativo hacia a otro.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/2d336053-fa9e-4466-9945-0ed02d9a30e4"  <img width="592" height="187" />
+  <img src="https://github.com/user-attachments/assets/2d336053-fa9e-4466-9945-0ed02d9a30e4"  width="50%" />
   <p><i>Paso 5: Speed y Rotation</i></p>
 </div>
 
