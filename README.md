@@ -62,7 +62,7 @@ Al finalizar el movimiento WASD pues nos movemos a el movimiento de la pantalla 
 Las variables de speed y rotationSpeed se encuentran privadas pero en un Serialized Field es para poder darle permiso al editor desde unity hacer cambios y cambiar el valor cuando desee. La variable speed es para el movimiento WASD del jugador y la de rotacion es para el moviemiento de la camara, el valor seria la sensibilidad, entre mas alta mas rapida y mas baja pues mas lento.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/11c205d5-325f-40b7-ba6b-a5ffbec95e9a" <img width="592" height="187"  />
+  <img src="https://github.com/user-attachments/assets/11c205d5-325f-40b7-ba6b-a5ffbec95e9a" <img width="600" height="200"  />
   <p><i>Paso 6: Forward Movement</i></p>
 </div>
 
