@@ -11,7 +11,7 @@ Este reto esta basado en hacer un script de c# el cual permita que el robot pued
 ## Proceso de WASD
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/dc49dfee-2424-456a-b5cf-2864487b35c2" <img width="592" height="187"/>
+  <img src="https://github.com/user-attachments/assets/dc49dfee-2424-456a-b5cf-2864487b35c2" <img width="500" height="200"/>
   <p><i>Paso 1: Scripts.</i></p>
 </div>
 
