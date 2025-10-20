@@ -9,11 +9,7 @@
 Este reto esta basado en hacer un script de c# el cual permita que el robot pueda brincar. Y por otra parte, explicar el proceso de como se realizaron los diferentes mappings como shoot, horizontal/vertical movement,etc.
 
 
-## Proceso de WASD
-<div align="center">
-  <img src=height="187" alt="scripsEnClase" src="https://github.com/user-attachments/assets/bab18a91-b9e6-4914-b9fa-bffe4d6ce02d" />  width="50%" />
-  <p><i>Scripts.</i></p>
-</div>
+
 
 
 
