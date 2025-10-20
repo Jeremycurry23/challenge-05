@@ -11,59 +11,60 @@ Este reto esta basado en hacer un script de c# el cual permita que el robot pued
 ## Proceso de WASD
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/dc49dfee-2424-456a-b5cf-2864487b35c2" width="50%" />
-  <p><i>Paso 1: Scripts.</i></p>
+  <img src="https://github.com/user-attachments/assets/dc49dfee-2424-456a-b5cf-2864487b35c2" width="50%" />
+  <p><i>Paso 1: Scripts.</i></p>
 </div>
 
 El movimiento del jugador con WASD se realizo en clase al igual que la accion de Shooting. Lo primero que se hacia era crear un script, este se lograba yendo a algun objeto, se seleccionaba "add component" luego "new script" y ahi se le nombraba segun su funcion y se guardaba en el folder creado para scripts en assets. Estos son los scripts que se hicieron en clase.
 
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/3092d419-8a97-4dcf-929a-04197ce7f2e2" width="50%" />
-  <p><i>Paso 2: Player movement update.</i></p>
+  <img src="https://github.com/user-attachments/assets/3092d419-8a97-4dcf-929a-04197ce7f2e2" width="50%" />
+  <p><i>Paso 2: Player movement update.</i></p>
 </div>
 
 Al inicio de clase se habia hecho el movimiento WASD del jugar junto con las flechas con el input viejo. En la imagen el codigo comentado es el old input. Tambien se realizo con los circuitos o mejor dicho los visualScripting con el graph (Imagen siguiente). Al final tuvimos que ir en unity a "edit" luego a "project setting" y cambiar del imput viejo al nuevo. Para esto se tuvo que agregar la libreria de UnityEngine.InputSystem y se agrego una linea de codigo para lo del deltaTime.
 
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/28035dd1-9873-4ed3-b582-8e0e897acfcf" width="50%" />
-  <p><i>Paso 2: (Old input)</i></p>
+  <img src="https://github.com/user-attachments/assets/28035dd1-9873-4ed3-b582-8e0e897acfcf" width="50%" />
+  <p><i>Paso 2: (Old input)</i></p>
 </div>
 
-Este es el VisualScripting para el input viejo de movimiento de jugador con WASD. Este se logro yendo a "add component"  despues a VisualScripting y graph. Una vez dentro era cuestion de darle a new node y se agregaba la funcion que se necesitaba para lograr la accion deseada.
+Este es el VisualScripting para el input viejo de movimiento de jugador con WASD. Este se logro yendo a "add component"  despues a VisualScripting y graph. Una vez dentro era cuestion de darle a new node y se agregaba la funcion que se necesitaba para lograr la accion deseada.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f73e3708-c5b7-4336-8e64-adf78a310d1d" width="50%" />
-  <p><i>Paso 3: Input</i></p>
+  <img src="https://github.com/user-attachments/assets/f73e3708-c5b7-4336-8e64-adf78a310d1d" width="50%" />
+  <p><i>Paso 3: Input</i></p>
 </div>
 
 Volviendo al movimiento de jugador, se deshabilito el inout viejo en los settings y se coloco el nuevo y el codigo se reemplazo. Pero para lograr esto habia que bajar en package manager en unity el Input System manager. Una vez se instalo pues se iba a "add component" y se le daba a action.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/2012515b-da59-48a1-acb7-6181ed0cecbf"  width="50%" />
-  <p><i>Paso 3: (Input SysMap)</i></p>
+  <img src="https://github.com/user-attachments/assets/2012515b-da59-48a1-acb7-6181ed0cecbf"  width="50%" />
+  <p><i>Paso 3: (Input SysMap)</i></p>
 </div>
 
 Una vez ahi, se le coloco de nombre InputSysMap01 y es una herramienta que sirve para facilitar ese link de la accion que quiere realizar el jugador en el juego.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/5fb95c10-da71-4e86-9d2b-8f5379aa297c" width="50%" />
-  <p><i>Paso 4: Look player movement</i></p>
+  <img src="https://github.com/user-attachments/assets/5fb95c10-da71-4e86-9d2b-8f5379aa297c" width="50%" />
+  <p><i>Paso 4: Look player movement</i></p>
 </div>
 
 Al finalizar el movimiento WASD pues nos movemos a el movimiento de la pantalla o camara. Al inicio en la clase tambien se habia realizado el mismo con el input viejo y se habia hecho un visual scripting tambien. Pero aqui en la imagen podemos ver el codigo para el input nuevo y tambien una funcion awake que sirve para que el mouse desaparezca dentro del recuadro de imagen mientras se este moviendo la camara. Algo que hay que agregar es que con el input nuevo, el cambio mas grande que hubo en el codigo es el tener que agregar una variable Vector 2 que este tiene los ejes de X y Y entonces el lookValue es de tipo float porque asi el sistema reconoce el movimiento con el valor positivo a un lado y con el negativo hacia a otro.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/2d336053-fa9e-4466-9945-0ed02d9a30e4"  width="50%" />
-  <p><i>Paso 5: Speed y Rotation</i></p>
+  <img src="https://github.com/user-attachments/assets/2d336053-fa9e-4466-9945-0ed02d9a30e4"  width="50%" />
+  <p><i>Paso 5: Speed y Rotation</i></p>
 </div>
 
 Las variables de speed y rotationSpeed se encuentran privadas pero en un Serialized Field es para poder darle permiso al editor desde unity hacer cambios y cambiar el valor cuando desee. La variable speed es para el movimiento WASD del jugador y la de rotacion es para el moviemiento de la camara, el valor seria la sensibilidad, entre mas alta mas rapida y mas baja pues mas lento.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/11c205d5-325f-40b7-ba6b-a5ffbec95e9a" width="50%" />
-  <p><i>Paso 6: Forward Movement</i></p>
+GHA-ALE-123.jpg
+  <img src="https://github.com/user-attachments/assets/11c205d5-325f-40b7-ba6b-a5ffbec95e9a" width="50%" />
+  <p><i>Paso 6: Forward Movement</i></p>
 </div>
 
 Otro script que se habia creado en clase fue el fowardMovement. Esta variable funcionaba para al objeto que se le aplicara una vez realizada la opcion que lo active esto simplemente iba a seguir hacia adelante. Tambien estaba en SerializedField para poder editarlo desde unity cambiando el valor el cual seria el speed para la velocidad en el que ese objeto se fuera a mover hacia adelante. Despues de esto se realizo el PlayerShooting junto con el Bullet y el ShootPoint.
@@ -71,45 +72,48 @@ Otro script que se habia creado en clase fue el fowardMovement. Esta variable fu
 ## Proceso de Player Shooting
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/cbc1c809-d77e-44bb-bf26-993125deb211" <img width="50%"/>
-  <p><i>Paso 1: Creacion de Bullet.</i></p>
+  <img src="https://github.com/user-attachments/assets/cbc1c809-d77e-44bb-bf26-993125deb211" <img width="50%"/>
+  <p><i>Paso 1: Creacion de Bullet.</i></p>
 </div>
 
-Para comenzar con el sistema de disparo del jugador (Player Shooting), primero se creó la bala. Para esto, se fue al menú GameObject, se seleccionó el 3D Object  "Sphere" y se posicionó correctamente frente a la pistola del jugador. Luego, se ajustó su tamaño para que tuviera la apariencia de una bala.
+Para comenzar con el sistema de disparo del jugador (Player Shooting), primero se creó la bala. Para esto, se fue al menú GameObject, se seleccionó el 3D Object  "Sphere" y se posicionó correctamente frente a la pistola del jugador. Luego, se ajustó su tamaño para que tuviera la apariencia de una bala.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/32135746-f42b-473e-8d3a-59f682c0bc8f" <img width="50%"/>
-  <img src="https://github.com/user-attachments/assets/736b1660-64dd-4157-8984-f38db08fddc8" <img width="50%" />
-  <p><i>Paso 2: Prefab y Shooting Point</i></p>
+  <img src="https://github.com/user-attachments/assets/32135746-f42b-473e-8d3a-59f682c0bc8f" <img width="50%"/>
+  <img src="https://github.com/user-attachments/assets/736b1660-64dd-4157-8984-f38db08fddc8" <img width="50%" />
+  <p><i>Paso 2: Prefab y Shooting Point</i></p>
 </div>
 
 Una vez creada la bala, se convirtió en un Prefab arrastrándola desde la jerarquía hacia la carpeta de Assets. A este prefab se le aplicó un color rojo. luego, se creó un objeto vacío (Empty GameObject) llamado “ShootingPoint”, que se utiliza como punto de origen del disparo. Es decir, cada vez que el jugador dispara, el sistema crea una instancia del prefab de la bala en la posición y dirección del ShootingPoint. El prefab es esencial, ya que el sistema de disparo del jugador depende de él para poder instanciar la bala cada vez que se presione el botón de disparo.
 
 <div align="center">
-  <img <img src="https://github.com/user-attachments/assets/d63c7803-4ca0-46a4-8ad0-59c1a1dbe455" <img width="50%" />
-  <p><i>Paso 3: Creación del Script</i></p>
+SPO-ALE-123.jpg
+  <img <img src="https://github.com/user-attachments/assets/d63c7803-4ca0-46a4-8ad0-59c1a1dbe455" <img width="50%" />
+  <p><i>Paso 3: Creación del Script</i></p>
 </div>
 
 Después de tener el prefab de la bala, se creó el script que controlará el disparo del jugador.
 Para esto, se seleccionó el objeto Player, se presionó “Add Component” y luego “New Script”, asignándole el nombre PlayerShooting.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/d01194a9-6700-4577-963d-cdbc6617235f" <img width="50%" />
-  <p><i>Paso 4: Player Shooting (primer metodo)</i></p>
+{asset_ALE_123.jpg}
+  <img src="https://github.com/user-attachments/assets/d01194a9-6700-4577-963d-cdbc6617235f" <img width="50%" />
+  <p><i>Paso 4: Player Shooting (primer metodo)</i></p>
 </div>
 
 Dentro del script PlayerShooting, se declararon dos variables públicas llamadas prefab y shootPoint, las cuales permiten establecer en el editor de Unity cuál será el objeto que se disparará (el prefab) y desde qué punto del jugador saldrá el disparo (el ShootPoint). Para programar el funcionamiento inicial del sistema de disparo, se utilizó un if statement el cual verificaba si el jugador hacía left click, utilizando la instrucción Input.GetKeyDown(KeyCode.Mouse0). Al el jugador hacer left click, el script creaba una copia del prefab de la bala mediante la función Instantiate(prefab) y le asignaba la misma posición y rotación del objeto ShootPoint, asegurando que la bala saliera desde la pistola y en la dirección correcta. Este primer método cumplía correctamente la función de disparar proyectiles, aunque utilizaba el sistema antiguo de entrada de Unity, conocido como Input System clásico, el cual fue posteriormente reemplazado por el nuevo sistema de unity.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/a5bde2e6-b01f-4f06-b9a6-1620619af2ab" <img width="50%"  />
-  <p><i>Paso 5: AutoDestroy</i></p>
+  <img src="https://github.com/user-attachments/assets/a5bde2e6-b01f-4f06-b9a6-1620619af2ab" <img width="50%"  />
+  <p><i>Paso 5: AutoDestroy</i></p>
 </div>
 
 Luego de implementar el primer método, se creó un nuevo script llamado AutoDestroy, el cual se aplicó al prefab de la bala. Este script tiene la función de destruir automáticamente la bala después de un tiempo determinado (delay), evitando que las balas se acumulen en la escena.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/6e385816-3510-4c72-82f4-7f3d5cb195d4" <img width="50%" />
-  <p><i>Paso 6: Player Shooting (segundo método)</i></p>
+s
+  <img src="https://github.com/user-attachments/assets/6e385816-3510-4c72-82f4-7f3d5cb195d4" <img width="50%" />
+  <p><i>Paso 6: Player Shooting (segundo método)</i></p>
 </div>
 
 Después de probar el primer método en clase, se implementó una versión más moderna del Player Shooting, utilizando el nuevo Input System de Unity.
@@ -117,20 +121,83 @@ Para configurarlo, se fue a Edit, Project Settings, Player y luego a la opción 
 Después, en el script PlayerShooting, se añadió la línea "using UnityEngine.InputSystem" en la parte de arriba del script, lo que permite usar las nuevas herramientas del sistema de entrada de unity.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/b8331f01-b7a0-49c7-93ae-547e2d027b70"  <img width="50%"  />
-  <p><i>Paso 7: Player Shooting (Continuación del segundo método)</i></p>
+s
+  <img src="https://github.com/user-attachments/assets/b8331f01-b7a0-49c7-93ae-547e2d027b70"  <img width="50%"  />
+  <p><i>Paso 7: Player Shooting (Continuación del segundo método)</i></p>
 </div>
 
 Por último, se creó la función OnFire(), la cual contiene un if statement, que al detectar que el jugador presiona el botón de disparo, instancia una nueva bala en la posición y rotación del ShootingPoint, de forma muy similar al método anterior. En resumen, el nuevo método realiza la misma acción que el anterior, pero utiliza las funciones del nuevo sistema de entrada de Unity.
 
 ## Proceso de Jump
 
-## Proceso de Shift 
+<div align="center">
+  <img src="URL_DE_LA_IMAGEN_DEL_SCRIPT_PLAYERJUMP" width="50%" />
+  <p><i>Paso 1: Creación del Script PlayerJump</i></p>
+</div>
+
+Para implementar el salto, se comenzó creando un nuevo script de C# llamado `PlayerJump`. Este script es necesario para manejar la física del salto. Dentro del script, se declararon dos variables: una `private Rigidbody rb` para almacenar el componente de física del jugador y una `public float jumpForce` para poder ajustar la altura del salto fácilmente desde el editor de Unity.
+
+<div align="center">
+  <img src="URL_DE_LA_IMAGEN_DEL_CODIGO_ONJUMP" width="50%" />
+  <p><i>Paso 2: Lógica de Salto y Física</i></p>
+</div>
+
+En el método `Start()`, se inicializó la variable `rb` con `rb = GetComponent<Rigidbody>();`. Esto es crucial, ya que sin el `Rigidbody`, no podemos aplicar fuerzas físicas. Luego, en lugar de usar `Update()`, se creó una función pública `public void OnJump()`. Esta función es la que será llamada por el nuevo Input System. Dentro de `OnJump()`, se utiliza la línea `rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);`. Se usa `ForceMode.Impulse` porque aplica la fuerza instantáneamente, lo cual es perfecto para un salto, a diferencia de una fuerza continua.
+
+<div align="center">
+  <img src="URL_DE_LA_IMAGEN_DEL_INPUTSYSMAP_CON_JUMP" width="50%" />
+  <p><i>Paso 3: Configuración del Input Action Asset</i></p>
+</div>
+
+Al igual que con "Fire" y "Move", se tuvo que definir la acción de salto en el archivo `InputSysMap01`. Se creó una nueva `Action` llamada "Jump". A esta acción se le añadió un *binding* (una asignación) y se configuró para que se activara con la tecla `Space` (barra espaciadora) del teclado.
+
+<div align="center">
+  <img src="URL_DE_LA_IMAGEN_DEL_PLAYER_INPUT_CON_SEND_MESSAGES" width="50%" />
+  <p><i>Paso 4: Conexión con el Componente Player Input</i></p>
+</div>
+
+El último paso fue conectar la tecla con el script. Esto se hizo en el componente `Player Input` del objeto "Player". Se aseguró que el `Behavior` estuviera configurado como `Send Messages`. Este modo de operación hace que Unity, al detectar la acción "Jump", busque automáticamente en todos los scripts del "Player" una función que se llame `OnJump()` y la ejecute. Esto nos permitió que el salto funcionara sin tener que escribir código para revisar la tecla en `Update()`.
+
+## Proceso de Shift
+
+<div align="center">
+  <img src="URL_DE_LA_IMAGEN_DEL_SCRIPT_PLAYERMOVEMENT_CON_SPRINT" width="50%" />
+  <p><i>Paso 1: Modificación del Script PlayerMovement</i></p>
+</div>
+
+Para la acción de correr (sprint), no se creó un script nuevo, sino que se modificó el `PlayerMovement.cs` existente. Primero, se añadieron dos variables: una `[SerializeField] private float sprintSpeed;` para definir la velocidad rápida (y poder editarla en el Inspector) y otra `private bool isSprinting = false;` para guardar el estado de si el jugador está corriendo o no.
+
+<div align="center">
+  <img src="URL_DE_LA_IMAGEN_DEL_CODIGO_ONSPRINT" width="50%" />
+  <p><i>Paso 2: Creación de la Función OnSprint</i></p>
+</div>
+
+Siguiendo el modelo del nuevo Input System, se creó una nueva función pública: `public void OnSprint(InputValue value)`. Esta función es diferente a `OnJump`, ya que necesita saber no solo *si* se presionó la tecla, sino *si se mantiene presionada*. La línea clave aquí es `isSprinting = value.isPressed;`. Esta línea actualiza la variable `isSprinting` a `true` únicamente mientras la tecla Shift está presionada, y la vuelve `false` en el instante en que se suelta.
+
+<div align="center">
+  <img src="URL_DE_LA_IMAGEN_DEL_CODIGO_UPDATE_CON_OPERADOR_TERNARIO" width="50%" />
+  <p><i>Paso 3: Actualización de la Lógica en Update()</i></p>
+</div>
+
+En la función `Update()`, donde se calcula el movimiento, se añadió una línea para decidir qué velocidad usar. Se usó un operador ternario (una forma corta de `if/else`): `float currentSpeed = isSprinting ? sprintSpeed : walkSpeed;`. Esto significa: "si `isSprinting` es verdadero, `currentSpeed` será `sprintSpeed`; de lo contrario, será `walkSpeed`". Finalmente, la línea de movimiento se actualizó a `transform.Translate(move * currentSpeed * Time.deltaTime);` para que use la velocidad correcta.
+
+<div align="center">
+  <img src="URL_DE_LA_IMAGEN_DEL_INPUTSYSMAP_CON_SPRINT_Y_SIN_TOGGLE" width="50%" />
+  <p><i>Paso 4: Configuración del Input Action Asset (Sprint)</i></p>
+</div>
+
+Al igual que con "Jump", se añadió una nueva `Action` llamada "Sprint" en el `InputSysMap01`. Se le asignó un *binding* a la tecla `Left Shift`. Fue importante asegurarse de que en la sección de `Interactions` (Interacciones) de este *binding*, no estuviera añadida la interacción `Toggle` (alternar). Si `Toggle` estuviera activo, el jugador empezaría a correr y no pararía hasta volver a presionar Shift. Al dejarlo vacío (o en `Press`), se logra el efecto de "correr solo mientras se mantiene presionado", que es lo que `value.isPressed` necesita para funcionar.
+
+<div align="center">
+SPO-ALE-123.jpg
+  <img  src="playerMovement.gif" width="50%" />
+  <p><i>Resultado final</i></p>
+</div>
 
 ## Experiencia ganada
 
 Debbimar - "Lo mas que me gusto de esta tarea y trabajo en clase fue el visual scripting, aunque prefiero escribir codigo a tener que bregar con esos conectores pienso que fue bien interesante y "cool". Aunque entre mas acciones el diagrama es mas grande y grande que apenas se puede ver completo sigue siendo una forma de programar (en bloque) para un videojuego. Realmente es entretenido bregar con los conectores pero vuelvo y repito, prefiero el codigo porque lo siento mas directo y limpio y si tando "rodeo" ya que en programacion con bloque hay que estar pendiente a las lineas y que los conectores esten conectados a donde deben."
 
-Jonlier -
+Jonlier - "Mi mayor aprendizaje en este reto fue entender la diferencia entre el viejo Input Manager y el nuevo Input System. Al principio fue confuso, especialmente cuando mi código de `Input.GetKeyDown` no funcionaba. Pero una vez que configuramos el `InputSysMap01`, vi lo poderoso que es. Me gustó mucho cómo el nuevo sistema te permite crear "Acciones" como 'Jump' o 'Sprint' y luego conectar esas acciones a funciones específicas en C#, como `OnJump()` y `OnSprint()`. Resolver el problema del 'sticky shift' (cuando el sprint se quedaba pegado) me ayudó a entender la diferencia entre una acción de tipo `Press` y una `Toggle`, lo cual es fundamental."
 
 Jeremy - "En este trabajo lo que más me gustó fue implementar las funciones del Player Shooting, tanto como el primer método como con el método moderno. Me pareció muy interesante aprender cómo se programa para que las balas se autodestruyan automáticamente y cómo se crean instancias que salen específicamente desde la pistola. Creo que este tema me llamó mucho la atención porque me gustan mucho los videojuegos "shooters", como Apex Legends, y poder entender cómo funcionan esas mecánicas “behind the scenes” me resultó muy entretenido."
