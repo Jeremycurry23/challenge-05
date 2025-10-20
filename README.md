@@ -133,4 +133,4 @@ Debbimar - "Lo mas que me gusto de esta tarea y trabajo en clase fue el visual s
 
 Jonlier -
 
-Jeremy -
+Jeremy - "En este trabajo lo que más me gustó fue implementar las funciones del Player Shooting, tanto como el primer método como con el método moderno. Me pareció muy interesante aprender cómo se programa para que las balas se autodestruyan automáticamente y cómo se crean instancias que salen específicamente desde la pistola. Creo que este tema me llamó mucho la atención porque me gustan mucho los videojuegos "shooters", como Apex Legends, y poder entender cómo funcionan esas mecánicas “behind the scenes” me resultó muy entretenido."
