@@ -200,7 +200,7 @@ Al igual que con "Jump", se añadió una nueva `Action` llamada **"Sprint"** en 
 ## Resultado final
 <div align="center">
   <img  src="playerMovement.gif" width="50%" />
-  <p><i><b></b></i></p>
+  <p><i><b>Gif mostrando los movimientos</b></i></p>
 </div>
 
 ---
