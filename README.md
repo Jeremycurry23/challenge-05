@@ -64,7 +64,6 @@ Al finalizar el movimiento **WASD** pues nos movemos a el movimiento de la panta
 Las variables de `speed` y `rotationSpeed` se encuentran privadas pero en un `[SerializeField]` es para poder darle permiso al editor desde Unity hacer cambios y cambiar el valor cuando desee. La variable `speed` es para el movimiento **WASD** del jugador y la de `rotationSpeed` es para el moviemiento de la camara, el valor seria la sensibilidad, entre mas alta mas rapida y mas baja pues mas lento.
 
 <div align="center">
-GHA-ALE-123.jpg
   <img src="https://github.com/user-attachments/assets/11c205d5-325f-40b7-ba6b-a5ffbec95e9a" width="50%" />
   <p><i>Paso 6: <b>Forward Movement</b></i></p>
 </div>
@@ -91,7 +90,6 @@ Para comenzar con el sistema de disparo del jugador (**Player Shooting**), prime
 Una vez creada la bala, se convirtió en un **`Prefab`** arrastrándola desde la jerarquía hacia la carpeta de **Assets**. A este prefab se le aplicó un color rojo. luego, se creó un objeto vacío (**`Empty GameObject`**) llamado **`ShootingPoint`**, que se utiliza como punto de origen del disparo. Es decir, cada vez que el jugador dispara, el sistema crea una instancia del `Prefab` de la bala en la posición y dirección del `ShootingPoint`. El `Prefab` es esencial, ya que el sistema de disparo del jugador depende de él para poder instanciar la bala cada vez que se presione el botón de disparo.
 
 <div align="center">
-SPO-ALE-123.jpg
   <img <img src="https://github.com/user-attachments/assets/d63c7803-4ca0-46a4-8ad0-59c1a1dbe455" <img width="50%" />
   <p><i>Paso 3: <b>Creación del Script</b></i></p>
 </div>
@@ -100,7 +98,6 @@ Después de tener el prefab de la bala, se creó el script que controlará el di
 Para esto, se seleccionó el objeto **Player**, se presionó **`Add Component`** y luego **`New Script`**, asignándole el nombre `PlayerShooting`.
 
 <div align="center">
-{asset_ALE_123.jpg}
   <img src="https://github.com/user-attachments/assets/d01194a9-6700-4577-963d-cdbc6617235f" <img width="50%" />
   <p><i>Paso 4: <b>Player Shooting (primer método)</b></i></p>
 </div>
@@ -115,7 +112,6 @@ Dentro del script `PlayerShooting`, se declararon dos variables públicas llamad
 Luego de implementar el primer método, se creó un nuevo script llamado `AutoDestroy`, el cual se aplicó al `Prefab` de la bala. Este script tiene la función de destruir automáticamente la bala después de un tiempo determinado (`delay`), evitando que las balas se acumulen en la escena.
 
 <div align="center">
-s
   <img src="https://github.com/user-attachments/assets/6e385816-3510-4c72-82f4-7f3d5cb195d4" <img width="50%" />
   <p><i>Paso 6: <b>Player Shooting (segundo método)</b></i></p>
 </div>
@@ -125,7 +121,6 @@ Para configurarlo, se fue a **`Edit > Project Settings > Player`** y luego a la 
 Después, en el script `PlayerShooting`, se añadió la línea `using UnityEngine.InputSystem` en la parte de arriba del script, lo que permite usar las nuevas herramientas del sistema de entrada de unity.
 
 <div align="center">
-s
   <img src="https://github.com/user-attachments/assets/b8331f01-b7a0-49c7-93ae-547e2d027b70"  <img width="50%"  />
   <p><i>Paso 7: <b>Player Shooting (Continuación del segundo método)</b></i></p>
 </div>
@@ -183,7 +178,6 @@ Para la acción de correr (sprint), no se creó un script nuevo, sino que se mod
 Siguiendo el modelo del nuevo Input System, se creó una nueva función pública: `public void OnSprint(InputValue value)`. Esta función es diferente a `OnJump`, ya que necesita saber no solo *si* se presionó la tecla, sino *si se mantiene presionada*. La línea clave aquí es `isSprinting = value.isPressed;`. Esta línea actualiza la variable `isSprinting` a `true` únicamente mientras la tecla **Shift** está presionada, y la vuelve `false` en el instante en que se suelta.
 
 <div align="center">
-GHA-ALE-123.jpg
   <img src="ternario.png" width="50%" />
   <p><i>Paso 3: <b>Actualización de la Lógica en Update()</b></i></p>
 </div>
@@ -196,6 +190,18 @@ En la función `Update()`, donde se calcula el movimiento, se añadió una líne
 </div>
 
 Al igual que con "Jump", se añadió una nueva `Action` llamada **"Sprint"** en el `InputSysMap01`. Se le asignó un *binding* a la tecla `Left Shift`. Fue importante asegurarse de que en la sección de **`Interactions`** (Interacciones) de este *binding*, no estuviera añadida la interacción **`Toggle`** (alternar). Si `Toggle` estuviera activo, el jugador empezaría a correr y no pararía hasta volver a presionar **Shift**. Al dejarlo vacío (o en `Press`), se logra el efecto de "correr solo mientras se mantiene presionado", que es lo que `value.isPressed` necesita para funcionar.
+
+## Resumen de los movimientos programados
+| Acción | Mapping |
+| :--- | :--- |
+| Movimiento horizontal | A y D, flechas izquierda y derecha |
+| Movimiento vertical | W y S, flechas arriba y abajo |
+| Disparo | Click izquierdo |
+| Brinco | Espacio |
+| Rotación | Mouse |
+| Movimiento horizontal rápido | Shift + (tecla de movimiento horizontal) |
+| Movimiento vertical rápido | Shift + (tecla de movimiento vertical) |
+
 
 ## Resultado final
 <div align="center">
