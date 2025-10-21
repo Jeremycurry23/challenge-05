@@ -207,7 +207,7 @@ Al igual que con "Jump", se añadió una nueva `Action` llamada **"Sprint"** en 
 <div align="center">
   <img  src="playerMovement.gif" width="50%" />
   <p><i><b>Gif mostrando los movimientos</b></i></p>
-  Si no carga el gif, debe abrirlo desde los archivos adjuntos. El mismo se llama *playerMovement.gif".
+  Si no carga el gif, debe abrirlo desde los archivos adjuntos. El mismo se llama "playerMovement.gif".
 </div>
 
 ---
